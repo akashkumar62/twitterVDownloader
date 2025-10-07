@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: twitter-downloader-api
+    env: node
+    buildCommand: pip install yt-dlp && npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
